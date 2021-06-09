@@ -1,0 +1,92 @@
+{
+  "name": "YUKKI SPAM USERBOT",
+  "description": "A Powerful Telegram Spam Userbot. Based and codes from Catuserbot",
+  "logo": "https://telegra.ph/file/bf6f67d9f1f1106ca4dce.jpg",
+  "keywords": [
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/sandy1709/catuserbot/",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "env": {
+    "ALIVE_NAME": {
+      "description": "give your name",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": "1273127"
+    } ,
+    "SUDO_USERS": {
+      "description": "Sudo Users IDs",
+      "value": "1562091466 1690949100"
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": "2626aee4ea587947c6a703f1a0d6a3cc"
+    },
+    "STRING_SESSION": {
+      "description": "Get this value by running python3 telesetup.py locally or https://generatestringsession.sandeep1709.repl.run",
+      "value": ""
+    },
+    "TG_BOT_USERNAME": {
+      "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the username of your bot",
+      "value": "@SpamforYukki1Bot"
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
+      "value": "1831700464:AAG-spzSLZ25-TBe191Ui3O2dg6Sc6pXlFc"
+    },
+    "SUDO_COMMAND_HAND_LER": {
+      "description": "Sudo Users Command Handler",
+      "value": "."
+    },
+    "COMMAND_HAND_LER": {
+      "description": "Set this one with only one the symbol to use it before your command to run like . , ' `",
+      "value": ".",
+      "required": false
+    },
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
+      "value": "ANYTHING",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Required for updating the bot and other stuff get it from https://dashboard.heroku.com/account",
+      "value": "b978e3f0-1deb-4797-9e4f-630fae9f78b3",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "YOUR app name ",
+      "value": "YukkiSpamBot",
+      "required": false
+    },
+    "TZ": {
+      "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
+      "value": "Asia/Kolkata",
+      "required": false
+    },
+    "UPSTREAM_REPO": {
+      "description": "Use either goodcat or badcat .if you need custom deploy then type your git repo link",
+      "value": "Yukki",
+      "required": false
+    }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "heroku/python"
+  }]
+}
