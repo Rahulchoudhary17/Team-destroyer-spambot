@@ -1,13 +1,62 @@
-FROM sandy1709/catuserbot:latest
+FROM python:3.9.2-slim-buster
 
-#clonning repo 
-RUN git clone https://github.com/TeriVheenKi/catuserbot.git /root/userbot
-#working directory 
-WORKDIR /root/userbot
 
-# Install requirements
-RUN pip3 install -U -r requirements.txt
+RUN mkdir /app
+RUN chmod 777 /app
+WORKDIR /app
 
-ENV PATH="/home/userbot/bin:$PATH"
-
-CMD ["python3","-m","userbot"]
+RUN apt -qq update
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Kolkata
+RUN apt update && apt upgrade -y && apt install --no-install-recommends -y \
+        debian-keyring \
+        debian-archive-keyring \
+        bash \
+        curl \
+        git \
+        util-linux \
+        libffi-dev \
+        libjpeg-dev \
+        liblzma-dev\
+        libjpeg62-turbo-dev \
+        libwebp-dev \
+        linux-headers-amd64 \
+        musl-dev \
+        musl \
+        neofetch \
+        python3-lxml \
+        postgresql \
+        postgresql-client \
+        libpq-dev \
+        libcurl4-openssl-dev \
+        libxml2-dev \
+        libxslt1-dev \
+        openssl \
+        pv \
+        jq \
+        wget \
+        python3-dev \
+        libreadline-dev \
+        libyaml-dev \
+        zlib1g \
+        ffmpeg \
+        libssl-dev \
+        libgconf-2-4 \
+        libxi6 \
+        zlib1g-dev \
+        xvfb \
+        unzip \
+        make \
+        libopus0 \
+        libopus-dev \
+        gcc
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    dpkg -i ./google-chrome-stable_current_amd64.deb; apt -fqqy install && \
+    rm ./google-chrome-stable_current_amd64.deb
+RUN wget -O chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip  && \
+    unzip chromedriver.zip chromedriver -d /usr/bin/ && \
+    rm chromedriver.zip
+COPY yourstepsis.py .
+COPY Xsetup.txt .
+RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r Xsetup.txt
+CMD ["python3","yourstepsis.py"]
