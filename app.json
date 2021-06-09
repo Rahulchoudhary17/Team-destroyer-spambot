@@ -1,7 +1,7 @@
 {
-  "name": "YUKKI SPAM USERBOT",
-  "description": "A Powerful Telegram Spam Userbot. Based and codes from Catuserbot",
-  "logo": "https://telegra.ph/file/bf6f67d9f1f1106ca4dce.jpg",
+  "name": "TEAM DESTROYER SPAMBOT",
+  "description": "A Powerful Telegram SPAM USERBOT MADE BY AT WORLD'S END",
+  "logo": "https://telegra.ph/file/de25c385782190a10ba3e.jpg",
   "keywords": [
     "plugin",
     "modular",
@@ -17,15 +17,15 @@
     },
     "APP_ID": {
       "description": "Get this value from my.telegram.org! Please do not steal",
-      "value": "1273127"
+      "value": "5638421"
     } ,
     "SUDO_USERS": {
       "description": "Sudo Users IDs",
-      "value": "1562091466 1690949100"
+      "value": "1753627371 1760779835 1811003206"
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal",
-      "value": "2626aee4ea587947c6a703f1a0d6a3cc"
+      "value": "d7b309e8e054f6bc3ba1fee8fe0c7cba"
     },
     "STRING_SESSION": {
       "description": "Get this value by running python3 telesetup.py locally or https://generatestringsession.sandeep1709.repl.run",
@@ -33,11 +33,11 @@
     },
     "TG_BOT_USERNAME": {
       "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the username of your bot",
-      "value": "@SpamforYukki1Bot"
+      "value": "@AT_WORLDS_END_PUBLIC_BOT"
     },
     "TG_BOT_TOKEN": {
       "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
-      "value": "1831700464:AAG-spzSLZ25-TBe191Ui3O2dg6Sc6pXlFc"
+      "value": "1862972381:AAFhn_uUwOfEzC_2iN_320pBtD2fV3Q3BUA"
     },
     "SUDO_COMMAND_HAND_LER": {
       "description": "Sudo Users Command Handler",
@@ -60,7 +60,7 @@
     },
     "HEROKU_APP_NAME": {
       "description": "YOUR app name ",
-      "value": "YukkiSpamBot",
+      "value": "team-destroyer-spambot",
       "required": false
     },
     "TZ": {
