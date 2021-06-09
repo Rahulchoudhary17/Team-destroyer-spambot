@@ -3,9 +3,9 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Yukki" ]]
+    if [[ $UPSTREAM_REPO == "Team-destroyer-spambot" ]]
     then
-        echo "https://github.com/YukkiBot/YukkiSpamBot/archive/master.zip"
+        echo "https://github.com/Rahulchoudhary17/Team-destroyer-spambot/archive/master.zip"
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -15,7 +15,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "https://github.com/YukkiBot/YukkiSpamBot/archive/master.zip"
+        echo "https://github.com/Rahulchoudhary17/Team-destroyer-spambot/archive/master.zip"
     fi
 }
 
@@ -23,14 +23,14 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Yukki" ]]
+    if [[ $UPSTREAM_REPO == "Team-destroyer-spambot" ]]
     then
-        rlink= echo "https://github.com/YukkiBot/YukkiSpamBot"
-    elif [[ $UPSTREAM_REPO =~ $regex ]]
+        rlink= echo "https://github.com/Rahulchoudhary17/Team-destroyer-spambot"
+    if [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink= echo "${UPSTREAM_REPO}"
     else
-        rlink=echo "https://github.com/YukkiBot/YukkiSpamBot"
+        rlink=echo "https://github.com/Rahulchoudhary17/Team-destroyer-spambot"
     fi
     echo "$rlink"
 }
@@ -42,7 +42,7 @@ _run_python_code() {
 _run_y_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/YukkiBot/YukkiXdeploy"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/Rahulchoudhary17/Team-destroyer-spambot"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -81,7 +81,7 @@ _set_bot () {
     _run__git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    Starting Yukki Spam Bot    "
+    echo "    Starting Team destroyer spambot Spam Bot    "
     python3 -m userbot
 }
 
