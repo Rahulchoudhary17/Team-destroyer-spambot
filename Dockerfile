@@ -1,7 +1,7 @@
 FROM sandy1709/catuserbot:alpine
 
 #clonning repo 
-RUN git clone https://github.com/notreallyshikhar/catuserbot.git /root/userbot
+RUN git clone Team-destroyer-spambot.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
