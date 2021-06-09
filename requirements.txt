@@ -1,0 +1,17 @@
+telethon
+aiofiles
+aiohttp
+cryptg
+DateTime
+python-dotenv
+gitpython
+heroku3
+regex
+requests
+emoji
+sqlalchemy==1.3.23
+validators
+Pillow
+psycopg2-binary
+hachoir
+telethon-tgcrypto
